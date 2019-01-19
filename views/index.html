@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>File Metadata Microservice</title>
+
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"/>
+    
+
+    <!-- jQuery Core 3.1.1 minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <title>QM FCC Exercise Tracker</title>
+    <meta name="description" content="FCC File Metadata">
+    <link id="favicon" rel="icon" href="https://cdn.gomix.com/26d86f78-822e-48b3-a3ba-a72341bac3ef%2FTransport-Train-icon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <main class="container">
+      <div clss="row">
+        <div class="center-block" id="display-container">
+          <!-- <div class="col-xs-12" id="main-container"> -->
+            <h3 id="app-title" class="text-center">File Metadata Microservice</h3>
+            <div class="row text-center">
+              <form method="post" action="/fileinfo" enctype="multipart/form-data" class="text-center"> 
+                <div class="col-xs-6">
+                  <h4 class="text-left">Step 1: upload file</h4>
+                  <label class="btn btn-primary">
+                      Choose File <input type="file" name="avatar" style="display: none;" onchange="$('#upload-file-info').html($(this).val());">
+                  </label>
+                  <span class="label label-info" id="upload-file-info"></span>
+                </div>
+
+                <div class="col-xs-6">
+                  <h4 class="text-left">Step 2: get file size</h4>
+                  <input class="btn btn-primary" type="submit" value="Get File Size"/>
+                </div>
+              </form>
+
+              <div class="col-xs-12 text-center">
+                <h4>Response Example: </h4>
+                <code>{"filesize":598923}</code>
+              </div>
+
+
+            </div>
+
+          <!-- </div> -->
+        </div>
+      </div> <!-- End of "row" div -->
+
+    </main> <!-- End of "container" -->
+
+   
+
+  </body>
+</html>
